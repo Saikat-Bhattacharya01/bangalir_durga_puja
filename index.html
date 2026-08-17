@@ -276,6 +276,26 @@
   .pandal-group-title:first-of-type{margin-top:0;}
   .pandal-group-title::before{content:""; width:34px; height:2px; background:var(--gold); display:inline-block;}
 
+  /* ---- metro-line pandal directory ---- */
+  .metro-pandal-intro{margin-top:76px;}
+  .metro-legend{display:flex; align-items:center; gap:8px; font-size:0.85rem; color:#5b4232; margin:4px 0 30px;}
+  .metro-legend .star-badge{color:var(--vermilion-deep); font-size:1rem;}
+  .metro-pandal-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(270px,1fr)); gap:24px;}
+  .metro-station-block{
+    background:var(--paper); border:1px solid rgba(200,155,60,0.35); border-radius:18px;
+    padding:22px 24px; box-shadow:0 12px 30px rgba(74,14,17,0.08);
+  }
+  .metro-station-name{
+    font-family:'Baloo Da 2', sans-serif; font-size:1.05rem; color:var(--vermilion-deep);
+    margin-bottom:14px; padding-bottom:10px; border-bottom:1px dashed rgba(179,39,26,0.28);
+    display:flex; align-items:center; gap:10px;
+  }
+  .metro-station-name .metro-icon{color:var(--gold); font-size:0.95rem;}
+  .metro-pandal-list{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .metro-pandal-list li{display:flex; align-items:baseline; gap:8px; font-size:0.88rem; color:var(--ink); line-height:1.5;}
+  .metro-pandal-list .num{color:var(--gold); font-weight:600; min-width:18px; font-size:0.82rem;}
+  .metro-pandal-list .star-badge{color:var(--vermilion-deep); font-size:0.8rem; margin-left:2px;}
+
   /* ---- user-submitted pandals ---- */
   .user-pandal-intro{margin-top:76px;}
   .add-pandal-form{
@@ -881,200 +901,173 @@
       <h2 class="section-title reveal">বিখ্যাত পূজা প্যান্ডেল</h2>
       <p class="section-lede reveal">কলকাতার রাস্তায় রাস্তায় যখন আলোর মালা জ্বলে ওঠে, তখন প্রতিটি প্যান্ডেল হয়ে ওঠে একেকটি গল্প — শিল্প, ভক্তি আর ভিড়ের মিলনস্থল। প্যান্ডেলের নামের নিচে ক্লিক করে আপনিও সেই প্যান্ডেলের নিজের তোলা ছবি যুক্ত করতে পারেন।</p>
 
-      <h3 class="pandal-group-title reveal">উত্তর কলকাতা</h3>
-      <div class="pandal-grid">
-        <div class="pandal-card reveal" style="background:linear-gradient(160deg,#6b1a17,var(--maroon-2));">
-          <span class="pandal-tag">উত্তর কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-kumartuli"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">কুমারটুলি পার্ক</div>
-            <p class="pandal-desc">মৃৎশিল্পীদের হাতের ছোঁয়ায় গড়ে ওঠা প্রতিমার আঁতুড়ঘর — এখানেই দেবীর প্রথম রূপ পায় মাটি থেকে।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-kumartuli">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-kumartuli" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('kumartuli', this)">
-          </div>
+      <!-- ---- METRO-LINE WISE PANDAL DIRECTORY ---- -->
+      <div class="metro-pandal-intro">
+        <span class="section-eyebrow reveal">মেট্রো স্টেশন ধরে খুঁজুন</span>
+        <h3 class="section-title reveal" style="font-size:clamp(1.5rem,3.4vw,2.1rem);">মেট্রো লাইন অনুযায়ী প্যান্ডেল তালিকা</h3>
+        <p class="section-lede reveal">কলকাতার বিখ্যাত সব দুর্গাপুজো প্যান্ডেল মেট্রো স্টেশন অনুযায়ী সাজানো হয়েছে, যাতে আপনি সহজেই ঠিক করতে পারেন কোন স্টেশন থেকে শুরু করে কোন প্যান্ডেলটি প্রথমে, কোনটি দ্বিতীয় বা তৃতীয় দেখবেন — পুরো রুট প্ল্যান করা আরও সহজ হয়ে যায়।</p>
+      </div>
+      <p class="metro-legend reveal"><span class="star-badge">©</span> চিহ্নিত প্যান্ডেলগুলি বিশেষভাবে জনপ্রিয় ও অবশ্যই দেখার মতো।</p>
+
+      <div class="metro-pandal-grid">
+        <div class="metro-station-block reveal">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> বরানগর</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Bandhudal Sporting Club</li>
+            <li><span class="num">2.</span> Ramakrishnapuram</li>
+          </ol>
         </div>
 
-        <div class="pandal-card reveal reveal-delay-2" style="background:linear-gradient(160deg,#7a2a12,var(--maroon-2));">
-          <span class="pandal-tag">উত্তর কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-sreebhumi"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">শ্রীভূমি স্পোর্টিং ক্লাব</div>
-            <p class="pandal-desc">প্রতি বছর চমক নিয়ে আসা থিমের বিশালতায় মুগ্ধ হয় গোটা শহর, রাত জেগে লাইন পড়ে দর্শনার্থীদের।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-sreebhumi">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-sreebhumi" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('sreebhumi', this)">
-          </div>
+        <div class="metro-station-block reveal reveal-delay-1">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> নোয়াপাড়া</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Dadabhai Sangha</li>
+          </ol>
         </div>
 
-        <div class="pandal-card reveal" style="background:linear-gradient(160deg,#7a2a12,var(--smoke));">
-          <span class="pandal-tag">উত্তর কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-bagbazar"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">বাগবাজার সার্বজনীন</div>
-            <p class="pandal-desc">১৯১৯ সালে প্রতিষ্ঠিত, কলকাতার প্রাচীনতম সর্বজনীন পুজোগুলির অন্যতম। ঐতিহ্যবাহী সাবেকি প্রতিমা ও রীতিনীতির জন্য আজও বিশেষভাবে সমাদৃত।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-bagbazar">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-bagbazar" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('bagbazar', this)">
-          </div>
+        <div class="metro-station-block reveal reveal-delay-2">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> বেলগাছিয়া</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Tala Park Prattay <span class="star-badge">©</span></li>
+            <li><span class="num">2.</span> Tata Barowari <span class="star-badge">©</span></li>
+            <li><span class="num">3.</span> Belgachia Sadharan Durgotsob <span class="star-badge">©</span></li>
+            <li><span class="num">4.</span> Belgachia Central Sarbojonin</li>
+            <li><span class="num">5.</span> Sreebhumi <span class="star-badge">©</span></li>
+            <li><span class="num">6.</span> Dumdum Park Barat Chakra</li>
+            <li><span class="num">7.</span> Dumdum Park Tarun Sangha</li>
+            <li><span class="num">8.</span> Dumdum Park Tarun dal <span class="star-badge">©</span></li>
+            <li><span class="num">9.</span> Dumdum Park Sarbojonin</li>
+          </ol>
         </div>
 
-        <div class="pandal-card reveal reveal-delay-1" style="background:linear-gradient(160deg,#8c1c13,var(--maroon-2));">
-          <span class="pandal-tag">উত্তর কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-tala"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">টালা পার্ক</div>
-            <p class="pandal-desc">উত্তর কলকাতার ঐতিহ্যবাহী পুজোগুলির মধ্যে অন্যতম, যেখানে থিম আর সাবেকিয়ানার মেলবন্ধনে প্রতি বছর নতুন চমক থাকে।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-tala">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-tala" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('tala', this)">
-          </div>
+        <div class="metro-station-block reveal">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> শ্যামবাজার</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Bagbazar Sarbojonin <span class="star-badge">©</span></li>
+            <li><span class="num">2.</span> Shymbazar Friends Union</li>
+            <li><span class="num">3.</span> Sikdar Bagan</li>
+            <li><span class="num">4.</span> North Tridhara <span class="star-badge">©</span></li>
+            <li><span class="num">5.</span> Nalin Sarkar Street</li>
+            <li><span class="num">6.</span> HatiBagan Sarbojanin <span class="star-badge">©</span></li>
+            <li><span class="num">7.</span> hatibagan Nabin Pally <span class="star-badge">©</span></li>
+            <li><span class="num">8.</span> lalbagan nabankur Durga Puja <span class="star-badge">©</span></li>
+            <li><span class="num">9.</span> kabiraj Bagan Sarbojanin</li>
+          </ol>
         </div>
 
-        <div class="pandal-card reveal reveal-delay-2" style="background:linear-gradient(160deg,#4a0e11,var(--maroon-2));">
-          <span class="pandal-tag">উত্তর কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-kashibose"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">কাশী বোস লেন</div>
-            <p class="pandal-desc">কলকাতার অন্যতম জনপ্রিয় পুজো, প্রতিমার নজরকাড়া রূপ আর অভিনব থিমের জন্য প্রতি বছর দর্শনার্থীদের ভিড় জমে।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-kashibose">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-kashibose" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('kashibose', this)">
-          </div>
+        <div class="metro-station-block reveal reveal-delay-1">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> শোভাবাজার</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Jagat Mukherjee Park</li>
+            <li><span class="num">2.</span> Shobhabazar Rajbari <span class="star-badge">©</span></li>
+            <li><span class="num">3.</span> Sanghatirtha</li>
+            <li><span class="num">4.</span> Kumartuli Sarbojonin <span class="star-badge">©</span></li>
+            <li><span class="num">5.</span> Kumartuli Park <span class="star-badge">©</span></li>
+            <li><span class="num">6.</span> Hatkhola Gosaipara Sarbojonin</li>
+            <li><span class="num">7.</span> Ahiritala Sarbojonin <span class="star-badge">©</span></li>
+            <li><span class="num">8.</span> Ahiritala jubak Brinda</li>
+            <li><span class="num">9.</span> Beniatola Sarbojonin</li>
+            <li><span class="num">10.</span> Shobhabazar Sarbojonin <span class="star-badge">©</span></li>
+            <li><span class="num">11.</span> Kasi Bose lane <span class="star-badge">©</span></li>
+            <li><span class="num">12.</span> Shobhabazar Sarbojonin <span class="star-badge">©</span></li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal reveal-delay-2">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> গিরীশ পার্ক</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Jorasanko Sadharan Durgotsab <span class="star-badge">©</span></li>
+            <li><span class="num">2.</span> ChaltaBagan</li>
+            <li><span class="num">3.</span> 37 pally</li>
+            <li><span class="num">4.</span> Shimla beam sanity</li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> এম. জি. রোড</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Chor Bagan Sarbojonin <span class="star-badge">©</span></li>
+            <li><span class="num">2.</span> Mohammad Ali park <span class="star-badge">©</span></li>
+            <li><span class="num">3.</span> College Square <span class="star-badge">©</span></li>
+            <li><span class="num">4.</span> Santosh Mitra Square <span class="star-badge">©</span></li>
+            <li><span class="num">5.</span> Sealdah railways athletic club <span class="star-badge">©</span></li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal reveal-delay-1">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> নেতাজি ভবন</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Bhawanipur swadin Sangha</li>
+            <li><span class="num">2.</span> Bhawanipur 75 pally</li>
+            <li><span class="num">3.</span> 22 pally</li>
+            <li><span class="num">4.</span> 76 pally <span class="star-badge">©</span></li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal reveal-delay-2">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> যতীন দাস পার্ক</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Hazra Park</li>
+            <li><span class="num">2.</span> Bakul Bagan Sarbojonin</li>
+            <li><span class="num">3.</span> Abasar Durga Puja</li>
+            <li><span class="num">4.</span> Maddox Square</li>
+            <li><span class="num">5.</span> 64 pally <span class="star-badge">©</span></li>
+            <li><span class="num">6.</span> kalighat Milan Sangha <span class="star-badge">©</span></li>
+            <li><span class="num">7.</span> Kalighat sree sangha</li>
+            <li><span class="num">8.</span> Rupchand Mukherjee Lane</li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> কালীঘাট</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Chetla Agrani <span class="star-badge">©</span></li>
+            <li><span class="num">2.</span> 66 pally <span class="star-badge">©</span></li>
+            <li><span class="num">3.</span> Badamtala Ashar Sangha</li>
+            <li><span class="num">4.</span> Tricon Park <span class="star-badge">©</span></li>
+            <li><span class="num">5.</span> Desopriyo Park <span class="star-badge">©</span></li>
+            <li><span class="num">6.</span> Tridhara Sammilani <span class="star-badge">©</span></li>
+            <li><span class="num">7.</span> Ballygunge Culture Association <span class="star-badge">©</span></li>
+            <li><span class="num">8.</span> Hindustan Park</li>
+            <li><span class="num">9.</span> Hindustan club</li>
+            <li><span class="num">10.</span> Ekdaliya Evergeen <span class="star-badge">©</span></li>
+            <li><span class="num">11.</span> Bosepukur Talbagan Sarbojonin</li>
+            <li><span class="num">12.</span> Rajdanga Naba uday sango</li>
+            <li><span class="num">13.</span> Bosepukur sitala Mandin</li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal reveal-delay-1">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> রবীন্দ্র সরোবর</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Madiali Club</li>
+            <li><span class="num">2.</span> shiv Mandir Durga Pujo</li>
+            <li><span class="num">3.</span> Suruchi Sangha <span class="star-badge">©</span></li>
+            <li><span class="num">4.</span> Jodhpur park</li>
+            <li><span class="num">5.</span> Jodhpur park 95 pally</li>
+          </ol>
+        </div>
+
+        <div class="metro-station-block reveal reveal-delay-2">
+          <div class="metro-station-name"><span class="metro-icon">🚇</span> অতিরিক্ত এলাকা</div>
+          <ol class="metro-pandal-list">
+            <li><span class="num">1.</span> Kalyani</li>
+            <li><span class="num">2.</span> New Town</li>
+            <li><span class="num">3.</span> sodpur</li>
+            <li><span class="num">4.</span> DakshinDari (BidhanNagar)</li>
+          </ol>
         </div>
       </div>
-      <div class="user-pandal-grid" id="userPandalGrid-north"></div>
-
-      <h3 class="pandal-group-title reveal">মধ্য কলকাতা</h3>
-      <div class="pandal-grid">
-        <div class="pandal-card reveal" style="background:linear-gradient(160deg,#6b1a17,var(--smoke));">
-          <span class="pandal-tag">মধ্য কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-santoshmitra"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">সন্তোষ মিত্র স্কোয়ার</div>
-            <p class="pandal-desc">জমজমাট ভিড়, চোখধাঁধানো আলো আর অভিনব থিমে প্রতি বছর নতুন করে চমকে দেয় এই পুজো।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-santoshmitra">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-santoshmitra" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('santoshmitra', this)">
-          </div>
-        </div>
-
-        <div class="pandal-card reveal reveal-delay-1" style="background:linear-gradient(160deg,#8c1c13,var(--smoke));">
-          <span class="pandal-tag">মধ্য কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-collegesquare"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">কলেজ স্কোয়ার</div>
-            <p class="pandal-desc">জলের প্রতিফলনে আলোকসজ্জার মায়াবী দৃশ্য — ছাত্রজীবনের হাজারো স্মৃতির সাক্ষী এই প্রাঙ্গণ।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-collegesquare">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-collegesquare" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('collegesquare', this)">
-          </div>
-        </div>
-      </div>
-      <div class="user-pandal-grid" id="userPandalGrid-middle"></div>
-
-      <h3 class="pandal-group-title reveal">দক্ষিণ কলকাতা</h3>
-      <div class="pandal-grid">
-        <div class="pandal-card reveal" style="background:linear-gradient(160deg,#4a0e11,var(--smoke));">
-          <span class="pandal-tag">দক্ষিণ কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-suruchi"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">সুরুচি সংঘ</div>
-            <p class="pandal-desc">সৃজনশীল থিম আর নিখুঁত কারুকাজের জন্য বছরের পর বছর সেরার সম্মান ছিনিয়ে নেওয়া এক নাম।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-suruchi">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-suruchi" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('suruchi', this)">
-          </div>
-        </div>
-
-        <div class="pandal-card reveal reveal-delay-1" style="background:linear-gradient(160deg,#8c1c13,var(--maroon-2));">
-          <span class="pandal-tag">দক্ষিণ কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-ekdalia"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">একডালিয়া এভারগ্রিন</div>
-            <p class="pandal-desc">দক্ষিণ কলকাতার অন্যতম বনেদি পুজো, সাবেকিয়ানা আর জাঁকজমকের মিশেলে পরিচিত। প্রতিমার গঠনশৈলী ও আলোকসজ্জার জন্য প্রতি বছর ভিড় জমে।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-ekdalia">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-ekdalia" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('ekdalia', this)">
-          </div>
-        </div>
-
-        <div class="pandal-card reveal reveal-delay-2" style="background:linear-gradient(160deg,#4a0e11,var(--maroon-2));">
-          <span class="pandal-tag">দক্ষিণ কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-deshapriya"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">দেশপ্রিয় পার্ক</div>
-            <p class="pandal-desc">বিশালাকার ও চমকপ্রদ থিমের জন্য বিখ্যাত এই পুজো বহুবার শহরের সবচেয়ে বেশি আলোচিত প্যান্ডেলের তালিকায় উঠে এসেছে। বিরাট প্রতিমা দেখতে দূরদূরান্ত থেকে মানুষ আসেন।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-deshapriya">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-deshapriya" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('deshapriya', this)">
-          </div>
-        </div>
-
-        <div class="pandal-card reveal" style="background:linear-gradient(160deg,#4a0e11,var(--smoke));">
-          <span class="pandal-tag">দক্ষিণ কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-tridhara"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">ত্রিধারা সম্মিলনী</div>
-            <p class="pandal-desc">দক্ষিণ কলকাতার অন্যতম আলোচিত পুজো, বিশাল ও শৈল্পিক থিমের জন্য পরিচিত, যা প্রতি বছর নতুন গল্প বলে।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-tridhara">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-tridhara" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('tridhara', this)">
-          </div>
-        </div>
-
-        <div class="pandal-card reveal reveal-delay-1" style="background:linear-gradient(160deg,#6b1a17,var(--maroon-2));">
-          <span class="pandal-tag">দক্ষিণ কলকাতা</span>
-          <div class="pandal-visual" id="pandalVisual-maddox"><svg viewBox="0 0 200 220"><use href="#sym-gate"/></svg></div>
-          <div class="pandal-info">
-            <div class="pandal-name">ম্যাডক্স স্কোয়ার</div>
-            <p class="pandal-desc">আড্ডা, খাওয়াদাওয়া আর প্রতিমা দর্শনের এক অনন্য মিশেল — পুজোর দিনগুলোয় এখানকার আড্ডা কলকাতার এক পরিচিত ছবি।</p>
-            <label class="user-pandal-add-photo" for="pandalPhotoUpload-maddox">
-              <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
-              এই প্যান্ডেলের ছবি যুক্ত করুন
-            </label>
-            <input type="file" id="pandalPhotoUpload-maddox" accept="image/*" style="display:none;" onchange="addFixedPandalPhoto('maddox', this)">
-          </div>
-        </div>
-      </div>
-      <div class="user-pandal-grid" id="userPandalGrid-south"></div>
 
       <!-- ---- USER-ADDED PANDALS with per-pandal photo gallery ---- -->
       <div class="user-pandal-intro">
         <span class="section-eyebrow reveal">আপনার শহর, আপনার প্যান্ডেল</span>
         <h3 class="section-title reveal" style="font-size:clamp(1.5rem,3.4vw,2.1rem);">নতুন প্যান্ডেল যুক্ত করুন</h3>
-        <p class="section-lede reveal">আপনার এলাকার পুজো এই তালিকায় নেই? এলাকা বেছে নিয়ে প্যান্ডেলের নাম আর ছবি যুক্ত করুন — সেটি উপরের সংশ্লিষ্ট এলাকার তালিকাতেই যুক্ত হয়ে যাবে, নিজস্ব ছবির গ্যালারি-সহ।</p>
+        <p class="section-lede reveal">আপনার এলাকার পুজো এই তালিকায় নেই? প্যান্ডেলের নাম আর ছবি যুক্ত করুন — নিজস্ব ছবির গ্যালারি-সহ নিচে যুক্ত হয়ে যাবে।</p>
       </div>
 
       <form class="add-pandal-form reveal" id="addPandalForm">
         <input type="text" id="newPandalName" placeholder="প্যান্ডেলের নাম লিখুন" required>
-        <select id="newPandalRegion" required>
-          <option value="north">উত্তর কলকাতা</option>
-          <option value="middle">মধ্য কলকাতা</option>
-          <option value="south">দক্ষিণ কলকাতা</option>
-        </select>
         <label class="upload-btn" for="newPandalPhoto">
           <svg viewBox="0 0 24 24"><use href="#sym-camera"/></svg>
           প্রথম ছবি বেছে নিন
@@ -1083,6 +1076,7 @@
         <span class="form-hint">এই ডেটা সার্ভারবিহীন স্ট্যাটিক ওয়েবসাইট হওয়ায় আপাতত শুধু আপনার নিজের ব্রাউজারেই সংরক্ষিত থাকবে।</span>
         <button type="submit" class="btn-primary" style="animation:none; opacity:1; padding:12px 30px; font-size:0.92rem;">প্যান্ডেল যুক্ত করুন</button>
       </form>
+      <div class="user-pandal-grid" id="userPandalGrid-all"></div>
     </div>
   </section>
 
@@ -1726,10 +1720,9 @@
     });
   }
 
-  // ---------- User-submitted pandals with per-pandal photo gallery (grouped by region) ----------
+  // ---------- User-submitted pandals with per-pandal photo gallery ----------
   let userPandals = [];
   const userPandalSlideIndex = {};
-  const regionGridIds = { north: 'userPandalGrid-north', middle: 'userPandalGrid-middle', south: 'userPandalGrid-south' };
 
   function loadUserPandals(){
     try {
@@ -1772,12 +1765,9 @@
     </div>`;
   }
   function renderUserPandals(){
-    ['north','middle','south'].forEach(region => {
-      const grid = document.getElementById(regionGridIds[region]);
-      if (!grid) return;
-      const list = userPandals.filter(p => (p.region || 'north') === region);
-      grid.innerHTML = list.map(userPandalCardHtml).join('');
-    });
+    const grid = document.getElementById('userPandalGrid-all');
+    if (!grid) return;
+    grid.innerHTML = userPandals.map(userPandalCardHtml).join('');
   }
   function goToUserPandalSlide(id, i){
     const pandal = userPandals.find(p => p.id === id);
