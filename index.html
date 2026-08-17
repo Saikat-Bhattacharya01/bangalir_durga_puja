@@ -841,7 +841,7 @@
           <span class="menu-num">০১</span>
           <span class="menu-icon">🛕</span>
           <h3>বিখ্যাত প্যান্ডেল</h3>
-          <p>কলকাতার সেরা কিছু পূজা প্যান্ডেল এর তালিকা।</p>
+          <p>কলকাতার সেরা ছয়টি পূজা প্যান্ডেলের ঝলক।</p>
         </div>
         <div class="menu-card reveal reveal-delay-1" onclick="showSection('timeline')">
           <span class="menu-num">০২</span>
@@ -1516,7 +1516,7 @@
 
 <script>
   // ---------- Page navigation (home <-> section pages) ----------
-  function showSection(id){
+  function renderSection(id){
     document.getElementById('home').style.display = 'none';
     document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
     var target = document.getElementById(id);
@@ -1525,7 +1525,7 @@
     revealVisible();
     updateCornerButtonsTheme();
   }
-  function showHome(){
+  function renderHome(){
     document.getElementById('home').style.display = '';
     document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
     revealVisible();
@@ -1533,6 +1533,33 @@
     if (indexSection) indexSection.scrollIntoView({ block: 'start' });
     updateCornerButtonsTheme();
   }
+  function safePushState(state){
+    try { history.pushState(state, ''); } catch (err) { /* history API unavailable in this embed */ }
+  }
+  function safeReplaceState(state){
+    try { history.replaceState(state, ''); } catch (err) { /* history API unavailable in this embed */ }
+  }
+  function showSection(id){
+    renderSection(id);
+    safePushState({ section: id });
+  }
+  function showHome(){
+    renderHome();
+    safePushState({ section: null });
+  }
+  // Make the device/browser back button step back through in-app pages
+  // instead of closing the app or leaving the site.
+  window.addEventListener('popstate', (e) => {
+    const section = e.state && e.state.section;
+    if (section) {
+      renderSection(section);
+    } else {
+      renderHome();
+    }
+  });
+  // The very first history entry should represent the home view, so the
+  // first back-press always has an in-app state to return to.
+  safeReplaceState({ section: null });
 
   // ---------- Scroll reveal ----------
   const io = new IntersectionObserver((entries) => {
