@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://saikat-bhattacharya01.github.io/bangalir_durga_puja/sitemap.xml
